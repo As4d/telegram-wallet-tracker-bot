@@ -10,8 +10,8 @@
   - [x] Contact information.
 
 ## ✅ **Telegram Bot Integration**
-- [ ] Register the bot with Telegram's [BotFather](https://core.telegram.org/bots#botfather) and obtain an API token.
-- [ ] Install the `python-telegram-bot` library for Telegram API integration.
+- [x] Register the bot with Telegram's [BotFather](https://core.telegram.org/bots#botfather) and obtain an API token.
+- [x] Install the `python-telegram-bot` library for Telegram API integration.
 - [ ] Implement the following bot commands:
   - [ ] `/start`: Welcome message with usage instructions.
   - [ ] `/help`: Detailed help message.
