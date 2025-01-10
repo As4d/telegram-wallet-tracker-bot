@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
-from bot.commands.start_command import start_command
+from bot.commands import start_command, help_command
 import logging
 import asyncio
 
@@ -25,6 +25,7 @@ class TelegramBot:
     def setup_handlers(self):
         # Register the /start command
         self.app.add_handler(CommandHandler("start", start_command))
+        self.app.add_handler(CommandHandler("help", help_command))
 
     async def run(self):
         try:
