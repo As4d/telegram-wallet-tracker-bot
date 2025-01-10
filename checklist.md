@@ -1,13 +1,13 @@
 # Wallet Tracker Bot Development Checklist
 
 ## ✅ **Basic Setup**
-- [ x ] Create a Conda environment and initialize a Git repository.
-- [ x ] Set up a `LICENSE` file with a custom non-commercial license.
-- [ x ] Configure a `README.md` file with:
-  - [ x ] Project description.
-  - [ x ] Features and usage instructions.
-  - [ x ] Contribution guidelines.
-  - [ x ] Contact information.
+- [x] Create a Conda environment and initialize a Git repository.
+- [x] Set up a `LICENSE` file with a custom non-commercial license.
+- [x] Configure a `README.md` file with:
+  - [x] Project description.
+  - [x] Features and usage instructions.
+  - [x] Contribution guidelines.
+  - [x] Contact information.
 
 ## ✅ **Telegram Bot Integration**
 - [ ] Register the bot with Telegram's [BotFather](https://core.telegram.org/bots#botfather) and obtain an API token.
