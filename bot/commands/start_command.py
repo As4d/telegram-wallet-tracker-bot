@@ -1,19 +1,10 @@
+from pathlib import Path
 from telegram import Update
-from telegram.ext import CallbackContext, ContextTypes
+from telegram.ext import ContextTypes
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handles the /start command."""
-    welcome_message = (
-        "🌟 **Welcome to Sol Wallet Tracker Bot!**\n\n"
-        "🔍 **Key Features:**\n"
-        "- Track Solana wallet transactions in real-time\n"
-        "- Receive instant notifications for transactions\n"
-        "- Manage multiple wallet subscriptions\n\n"
-        "🚀 **Getting Started:**\n"
-        "- `/help` - View detailed usage instructions\n"
-        "- `/add <wallet_address>` - Add a wallet to track\n"
-        "- `/remove <wallet_address>` - Remove a tracked wallet\n"
-        "- `/list` - View all tracked wallets\n\n"
-        "Need assistance? Use `/help` for detailed instructions!"
-    )
+    message_path = Path(__file__).parent.parent / "messages" / "start.md"
+    with open(message_path, "r", encoding="utf-8") as f:
+        welcome_message = f.read()
     await update.message.reply_text(welcome_message, parse_mode="Markdown")
