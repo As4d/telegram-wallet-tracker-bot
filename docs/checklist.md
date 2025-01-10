@@ -12,8 +12,8 @@
 ## ✅ **Telegram Bot Integration**
 - [x] Register the bot with Telegram's [BotFather](https://core.telegram.org/bots#botfather) and obtain an API token.
 - [x] Install the `python-telegram-bot` library for Telegram API integration.
-- [ ] Implement the following bot commands:
-  - [ ] `/start`: Welcome message with usage instructions.
+- [x] Implement the following bot commands:
+  - [x] `/start`: Welcome message with usage instructions.
   - [ ] `/help`: Detailed help message.
   - [ ] `/add <wallet_address>`: Add a wallet to the tracking list.
   - [ ] `/remove <wallet_address>`: Remove a wallet from the tracking list.
