@@ -1,0 +1,13 @@
+name: wallet-tracker
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - requests
+  - python-telegram-bot
+  - flask  # Example for creating a lightweight API (optional)
+  - sqlalchemy  # Example for database management
+  - pip:
+      - web3  # For Ethereum wallet tracking
+      - solana  # For Solana wallet tracking
