@@ -39,14 +39,14 @@
   - [ ] Set thresholds for large transaction alerts.
 
 ## ✅ **User Subscription Management**
-- [ ] Use a database (e.g., PostgreSQL, SQLite) to store user subscriptions:
-  - [ ] Telegram user ID.
+- [x] Use a database (e.g., PostgreSQL, SQLite) to store user subscriptions:
+  - [x] Telegram user ID.
   - [ ] List of tracked wallet addresses.
   - [ ] Notification preferences.
 - [ ] Ensure unique user-wallet mappings to avoid duplication.
 
 ## ✅ **Security**
-- [ ] Use environment variables to store sensitive data (e.g., API keys, Telegram bot token).
+- [x] Use environment variables to store sensitive data (e.g., API keys, Telegram bot token).
 - [ ] Validate wallet addresses before adding them to the tracking list.
 - [ ] Prevent abuse by limiting the number of wallets a user can track.
 
@@ -60,7 +60,7 @@
   - [ ] Log API requests and responses.
 
 ## ✅ **Frontend (Bot User Experience)**
-- [ ] Design clear and concise bot responses for all commands.
+- [x] Design clear and concise bot responses for all commands.
 - [ ] Use buttons for user interactions where appropriate:
   - [ ] Inline buttons to add/remove wallets.
   - [ ] Settings menu for notification preferences.
