@@ -58,8 +58,8 @@ class TelegramBot:
         self.stop_signal = asyncio.Event()
         try:
             self.app = Application.builder().token(self.token).build()
-            self.app.bot_data['DATABASE_URL'] = self.database_url
-            self.app.bot_data['RPC_URL'] = self.rpc_url
+            self.app.bot_data['database_url'] = self.database_url
+            self.app.bot_data['rpc_url'] = self.rpc_url
         except Exception as e:
             raise RuntimeError(f"Failed to initialize bot: {str(e)}") from e
 
