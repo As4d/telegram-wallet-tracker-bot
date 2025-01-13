@@ -4,13 +4,21 @@ import os
 from dotenv import load_dotenv
 import signal
 
+
+
 async def main():
     load_dotenv()
     BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+    DATABASE_URL = os.getenv("DATABASE_URL")
+    RPC_URL = os.getenv("RPC_URL")
+
     if not BOT_TOKEN:
         raise ValueError("TELEGRAM_BOT_TOKEN not found in environment variables")
     
-    bot = TelegramBot(token=BOT_TOKEN)
+    if not DATABASE_URL:
+        raise ValueError("DATABASE_URL not found in environment variables")
+    
+    bot = TelegramBot(token=BOT_TOKEN, database_url=DATABASE_URL, rpc_url=RPC_URL)
     
     def signal_handler(sig, frame):
         """Handle shutdown signals"""
@@ -28,7 +36,7 @@ async def main():
     finally:
         print("Cleanup complete")
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     if os.name == 'nt':  # Windows
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     asyncio.run(main())

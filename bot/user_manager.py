@@ -15,6 +15,12 @@ class UserManager:
     
     def user_exists(self, user_id: str) -> bool:
         return self.data_storage.get_user(user_id) is not None
+    
+    def get_user_by_telegram_id(self, telegram_id: str) -> dict:
+        return self.data_storage.get_user(telegram_id)
+
+    def add_wallet_to_user(self, user_id: str, wallet_address: str) -> bool:
+        self.data_storage.link_user_wallet(user_id, wallet_address)
 
     def validate_user_id(self, user_id: str) -> bool:
         # Add validation logic for user ID
