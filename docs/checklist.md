@@ -15,12 +15,12 @@
 - [x] Implement the following bot commands:
   - [x] `/start`: Welcome message with usage instructions.
   - [x] `/help`: Detailed help message.
-  - [ ] `/add <wallet_address>`: Add a wallet to the tracking list.
+  - [x] `/add <wallet_address>`: Add a wallet to the tracking list.
   - [ ] `/remove <wallet_address>`: Remove a wallet from the tracking list.
   - [ ] `/list`: List all tracked wallets.
 
 ## ✅ **Wallet Tracking Functionality**
-- [ ] Integrate with the Solana RPC API or a third-party Solana API (e.g., [Solana Beach](https://solanabeach.io/)).
+- [x] Integrate with the Solana RPC API or a third-party Solana API (e.g., [Solana Beach](https://solanabeach.io/)).
 - [ ] Fetch wallet transaction history and real-time updates.
 - [ ] Parse transaction details:
   - [ ] Transaction type (incoming/outgoing).
@@ -41,13 +41,13 @@
 ## ✅ **User Subscription Management**
 - [x] Use a database (e.g., PostgreSQL, SQLite) to store user subscriptions:
   - [x] Telegram user ID.
-  - [ ] List of tracked wallet addresses.
+  - [x] List of tracked wallet addresses.
   - [ ] Notification preferences.
-- [ ] Ensure unique user-wallet mappings to avoid duplication.
+- [x] Ensure unique user-wallet mappings to avoid duplication.
 
 ## ✅ **Security**
 - [x] Use environment variables to store sensitive data (e.g., API keys, Telegram bot token).
-- [ ] Validate wallet addresses before adding them to the tracking list.
+- [x] Validate wallet addresses before adding them to the tracking list.
 - [ ] Prevent abuse by limiting the number of wallets a user can track.
 
 ## ✅ **Backend Architecture**
