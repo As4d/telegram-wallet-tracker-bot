@@ -3,7 +3,6 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from bot.wallet_manager import WalletManager
 from ..user_manager import UserManager
-import os
 
 async def add_wallet_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handles the /add command."""
