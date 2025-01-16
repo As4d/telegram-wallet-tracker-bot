@@ -17,7 +17,7 @@
   - [x] `/help`: Detailed help message.
   - [x] `/add <wallet_address>`: Add a wallet to the tracking list.
   - [ ] `/remove <wallet_address>`: Remove a wallet from the tracking list.
-  - [ ] `/list`: List all tracked wallets.
+  - [x] `/list`: List all tracked wallets.
 
 ## ✅ **Wallet Tracking Functionality**
 - [x] Integrate with the Solana RPC API or a third-party Solana API (e.g., [Solana Beach](https://solanabeach.io/)).
@@ -61,12 +61,12 @@
 
 ## ✅ **Frontend (Bot User Experience)**
 - [x] Design clear and concise bot responses for all commands.
-- [ ] Use buttons for user interactions where appropriate:
+- [x] Use buttons for user interactions where appropriate:
   - [ ] Inline buttons to add/remove wallets.
   - [ ] Settings menu for notification preferences.
 - [ ] Add error handling and user-friendly error messages:
-  - [ ] Invalid wallet address.
-  - [ ] API connectivity issues.
+  - [x] Invalid wallet address.
+  - [x] API connectivity issues.
   - [ ] Exceeded wallet tracking limit.
 
 ## ✅ **Testing**
