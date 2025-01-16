@@ -1,10 +1,9 @@
 from telegram import Update
-from telegram.ext import Application, CommandHandler, ContextTypes
-from bot.commands.start_command import start_command
-from bot.commands.help_command import help_command
-from bot.commands.add_wallet_command import add_wallet_command
+from telegram.ext import Application, CommandHandler, ContextTypes, CallbackQueryHandler
+from bot.commands import start_command, help_command, add_wallet_command, list_wallets_command, list_wallet_tokens_command
 import logging
 import asyncio
+
 
 class TelegramBot:
     def __init__(self, token: str, database_url: str, rpc_url: str):
@@ -32,6 +31,8 @@ class TelegramBot:
         self.app.add_handler(CommandHandler("start", start_command))
         self.app.add_handler(CommandHandler("help", help_command))
         self.app.add_handler(CommandHandler("add", add_wallet_command))
+        self.app.add_handler(CommandHandler("list", list_wallets_command))
+        self.app.add_handler(CallbackQueryHandler(list_wallet_tokens_command, pattern=r"tokens:"))
 
     async def run(self):
         try:
