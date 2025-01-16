@@ -25,3 +25,6 @@ class UserManager:
     def validate_user_id(self, user_id: str) -> bool:
         # Add validation logic for user ID
         return True if user_id else False
+
+    def get_wallets_by_user_id(self, user_id: str) -> list:
+        return self.data_storage.get_user_wallets(user_id)
